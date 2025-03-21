@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>A Bitcoin</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..1000&family=Poppins:wght@100..900&family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <style>
+    /* Global Styles */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Title Section */
+    #Title {
+      font: 800 40px "DM Sans", sans-serif;
+      text-align: center;
+      color: #181818;
+      margin: 50px 50px 10px 50px;
+      padding: 17px;
+      background-color: rgba(255,255,255,0.1);
+      box-shadow: 5px 5px 10px #18181873, -5px -5px 10px #f9f9f9;
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      text-shadow: 5px 5px 10px #18181873, -1px -1px 10px #f9f9f9;
+    }
+
+    /* Subtitles */
+    #subt, #subtm {
+      color: #181818;
+      text-align: center;
+      font: 500 15px "Raleway", sans-serif;
+    }
+    #subt {
+      margin-bottom: 700px;
+    }
+    #subtm {
+      margin-right: 75px;
+      text-shadow: 0px 0px 1px #18181873;
+    }
+
+    /* Music Control */
+    .music {
+      display: flex;
+      flex-direction: rows;
+      align-items: center;
+      position: absolute;
+      left: 20%;
+      gap: 10px;
+      margin-bottom: 100px;
+    }
+    .fiat, .sejarah{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border: 0.5px solid #18181873;
+      border-radius: 15px;
+      background-color: rgba(255,255,255,0.1);
+      backdrop-filter: blur(15px);
+      padding: 20px;
+    }
+    .fiat {
+      margin: 1000px 40px 40px 40px;
+    }
+
+    .sejarah {
+      margin: 100px 40px 40px 40px; /* Atur sesuai kebutuhan */
+    }
+    #fiat {
+      text-align: center;
+      font-family:Poppins;
+      padding: 15px;
+      font-size: 24px;
+    }
+    #pfiat {
+      text-align: center;
+      font-family: DM sans;
+      font-size: 16px;
+    }
+    .fiat img {
+      max-width: 100px auto;
+      border-radius: 10px;
+      border: 0.5px solid #18181873;
+    }
+
+    .equalizer {
+      font-size: 90px;
+      color: #181818;
+      text-shadow: 2px 2px 10px #18181873, -2px -2px 10px #f9f9f9;
+      cursor: pointer;
+      justify-content: center;
+      display: flex;
+    }
+    
+    #kurs, .crypt{
+    font-family: Poppins;
+    font-size: 10px;
+    display: flex;
+    gap: 30px; /* Jarak antar teks */
+    animation: marquee 45s linear infinite;
+    width: max-content;
+    white-space: nowrap;
+    }
+
+    .marquee-container, .marquee {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    }
+    
+
+    @keyframes marquee {
+    from { transform: translateX(100vw); }
+    to { transform: translateX(-100%); }
+    }
+
+    @media (max-width:600px){
+      body {
+        background: url('backmob.jpg') center / 600px auto no-repeat fixed
+      }
+    }
+
+    @media (min-width: 601px) {
+      body {
+        background: url('backdesk.jpg') center / 1920px no-repeat fixed;
+      }
+      .music {
+      top: 100%;
+      left: 43%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Title -->
+  <div id="Title" data-aos="fade-down">
+    Apa itu Bitcoin
+  </div>
+
+  <!-- Subtitle -->
+  <div id="subt" data-aos="fade-down" data-aos-delay="100">
+    dengan penjelasan sederhana<br>in indonesian language
+  </div>
+
+  <!-- Music Player -->
+  <div class="music" data-aos="fade-up" data-aos-delay="200">
+    <audio id="music" src="ponidi.mp3"></audio>
+    
+    <!-- Play/Pause Button -->
+    <i class="bi bi-soundwave equalizer" id="playButton"></i>
+
+    <!-- Play Music Text -->
+    <div id="subtm">
+      Let's play this music for better experience
+    </div>
+  </div>
+  
+  <div class="fiat" data-aos="fade-up">
+    <h1 id="fiat">Sebelum itu kita harus mempelajari sejarah uang atau Fiat</h1>
+    <p id="pfiat">
+      Apasih Fiat itu??<br>Kata "fiat" berasal dari bahasa Latin yang berarti "jadilah" atau "terjadilah". Dalam konteks keuangan, fiat merujuk pada mata uang yang nilainya ditentukan oleh pemerintah, bukan berdasarkan aset fisik seperti emas atau perak. Dengan kata lain, uang fiat tidak memiliki nilai intrinsik, tapi diterima sebagai alat tukar karena didukung oleh kepercayaan masyarakat dan regulasi pemerintah. Contohnya adalah dolar AS (USD), rupiah (IDR), euro (EUR), dan yen (JPY).
+    </p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCtnzsj84Ke1JWu12KE5txxKOeO3Svchx_5Tuu-zzCpnCf74iXBK0MLsUg&s=10">
+<!-- Marquee Container -->
+    <div class="marquee-container">
+     <div id="kurs">
+        USD IDR JPY EUR GBP AUD CAD CHF CNY HKD NZD SEK KRW SGD NOK MXN INR RUB ZAR TRY BRL MYR THB DKK PLN TWD HUF CZK ILS CLP PHP AED COP SAR RON BGN HRK VND PKR EGP NGN KES LKR BDT UAH QAR KZT PEN MAD OMR KWD JOD BHD ISK DOP UYU GHS TZS UGX MUR MVR NPR LAK MMK LBP JMD BWP NAD PYG BZD FJD XOF XAF XCD SCR SBD WST TOP VUV BTN MGA MNT PGK RWF SDG SOS SZL TMT TTD YER ZMW GMD MKD ALL AMD AZN GEL KGS MDL TJS
+     </div>
+    </div>
+    <div class="marquee">
+    <div id="cryptoPrices" class="crypt">Loading...</div>
+  </div>
+  </div>
+  <div class="sejarah" data-aos="fade-up">
+    <h1>Sejarah Fiat</h1>
+    <p>1. Awal Penggunaan (China, abad ke-11)<br><br>Dinasti Song di Tiongkok adalah yang pertama kali menggunakan uang kertas sebagai alat pembayaran yang diterbitkan oleh pemerintah.<br><br>Sebelumnya, masyarakat menggunakan koin emas dan perak, tetapi uang kertas lebih praktis karena lebih ringan.</p>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false
+    });
+
+    // Music Control
+    const playButton = document.getElementById("playButton");
+    const music = document.getElementById("music");
+
+    playButton.addEventListener("click", function() {
+      if (music.paused) {
+        music.play();
+        playButton.classList.remove("bi-soundwave");
+        playButton.classList.add("bi-pause-circle"); // Ubah jadi ikon pause
+      } else {
+        music.pause();
+        playButton.classList.remove("bi-pause-circle");
+        playButton.classList.add("bi-soundwave"); // Balikin ke equalizer
+      }
+    });
+  </script>
+  <script>
+    async function fetchCryptoPrices() {
+      try {
+        const coinIds = {
+          bitcoin: "BTC", ethereum: "ETH", tether: "USDT", binancecoin: "BNB", "usd-coin": "USDC",
+          ripple: "XRP", cardano: "ADA", dogecoin: "DOGE", solana: "SOL", polkadot: "DOT",
+          litecoin: "LTC", tron: "TRX", "shiba-inu": "SHIB", "avalanche-2": "AVAX", dai: "DAI",
+          "wrapped-bitcoin": "WBTC", uniswap: "UNI", chainlink: "LINK", "leo-token": "LEO", cosmos: "ATOM",
+          monero: "XMR", "ethereum-classic": "ETC", stellar: "XLM", "bitcoin-cash": "BCH", "internet-computer": "ICP",
+          filecoin: "FIL", "lido-dao": "LDO", "true-usd": "TUSD", "hedera-hashgraph": "HBAR", "quant-network": "QNT",
+          cronos: "CRO", aptos: "APT", arbitrum: "ARB", vechain: "VET", grass: "GRASS", bittensor: "TAO"
+        };
+
+        const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${Object.keys(coinIds).join(',')}&vs_currencies=usd`);
+        const data = await response.json();
+
+        console.log("Jumlah koin yang diterima:", Object.keys(data).length);
+        console.log("Data yang diterima:", data);
+
+        let pricesArray = Object.entries(coinIds).map(([id, symbol]) => {
+          if (data[id] && data[id].usd !== undefined) {
+            return `${symbol}: $${data[id].usd}`;
+          }
+          return null;
+        }).filter(item => item !== null); // Hapus koin yang nggak tersedia
+
+        const pricesString = pricesArray.join('  ');
+
+        document.getElementById('cryptoPrices').innerText = pricesString;
+
+      } catch (error) {
+        console.error('Gagal mengambil data harga cryptocurrency:', error);
+        document.getElementById('cryptoPrices').innerText = 'Gagal memuat data';
+      }
+    }
+
+    fetchCryptoPrices();
+    setInterval(fetchCryptoPrices, 10000);
+</script>
+  
+
+</body>
+</html>
